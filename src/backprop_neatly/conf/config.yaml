@@ -1,0 +1,10 @@
+defaults:
+  - algorithm: backprop
+  - dataset: xor
+  - _self_
+
+seed: 101
+
+hydra:
+  job:
+    chdir: false
