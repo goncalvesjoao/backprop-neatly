@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "backprop-neatly"
+version = "0.0.1"
+description = "NumPy implementation and evaluation of backpropagation, NEAT, and NEAT+backpropagation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.4.6",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.0",
+    "ruff>=0.15.17",
+    "ty>=0.0.50",
+]
+
+[tool.ty.environment]
+python = ".venv"
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
